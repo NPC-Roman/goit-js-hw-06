@@ -1,24 +1,16 @@
-/*const categoriesList = document.getElementById("categories");
+/*const categoriesSum = document.querySelectorAll(".item").length;
+console.log(`Number of categories: ${categoriesSum}`);*/
 
-// Отримуємо всі пункти категорій з класом "item"
-const categoryItems = categoriesList.querySelectorAll(".item");
+const list = document.querySelector("#categories");
+const items = list.querySelectorAll(".item");
+const sum = document.querySelectorAll(".item").length;
 
-// Пораховуємо кількість категорій (пунктів з класом "item")
-const numberOfCategories = categoryItems.length;
-console.log(`Number of categories: ${numberOfCategories}`);
+console.log(`Number of categories: ${sum}`);
 
-// Проходимося по кожному пункті категорії та виводимо інформацію в консоль
-categoryItems.forEach((item) => {
-  // Отримуємо заголовок (h2) з кожного пункту категорії
-  const categoryTitle = item.querySelector("h2").textContent;
+items.forEach((item) => {
+  const name = item.querySelector("h2").textContent;
+  const itemSum = item.querySelectorAll("ul li").length;
 
-  // Отримуємо всі елементи (li) вкладеного списку кожної категорії
-  const elementsInCategory = item.querySelectorAll("ul li");
-
-  // Пораховуємо кількість елементів у категорії
-  const numberOfElements = elementsInCategory.length;
-
-  // Виводимо інформацію про категорію та кількість її елементів в консоль
-  console.log(`Category: ${categoryTitle}`);
-  console.log(`Elements: ${numberOfElements}`);
-});*/
+  console.log(`Category: ${name}`);
+  console.log(`Elements: ${itemSum}`);
+});
