@@ -6,8 +6,8 @@ function submit(event) {
   event.preventDefault();
 
   const inputForm = {
-    Email: input.email.value,
-    Password: input.password.value,
+    email: input.email.value,
+    password: input.password.value,
   };
 
   if (input.email.value === "" || input.password.value === "") {
