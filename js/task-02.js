@@ -15,7 +15,7 @@ ingredients.forEach((ingredient) => {
 
   item.textContent = ingredient;
   item.classList.add("item");
-  list.appendChild(item);
+  items.push(item);
 });
 
 list.append(...items);
